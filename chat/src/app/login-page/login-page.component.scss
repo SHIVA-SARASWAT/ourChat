@@ -1,0 +1,84 @@
+/* Style adjustments for responsiveness and aesthetics */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #f3f4f6;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .login-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: #3498db; /* Changed text color */
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px 0px;
+    border: none;
+    border-bottom: 2px solid #bdc3c7;
+    font-size: 16px;
+    color: #555; /* Changed text color */
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: border-bottom-color 0.3s ease;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-bottom-color: #3498db; /* Changed focus color */
+  }
+  
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media screen and (max-width: 768px) {
+    .login-box {
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .login-box {
+      max-width: 280px;
+    }
+  }
+  

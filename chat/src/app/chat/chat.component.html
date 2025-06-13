@@ -1,0 +1,27 @@
+<div class="chat-header">
+    <div style="display: flex;align-items: center;">
+      <img src="https://i.ibb.co/4PTCSZL/Whats-App-Image-2024-04-30-at-15-08-49.jpg" alt="Profile Image" class="profile-image">
+      <h2 style="font-family: serif">Zul</h2>
+    </div>
+
+    <div style="display: flex;align-items: center;">
+      <button class="grievance-button" (click)="grievance()">शिकायत Portal</button>
+      <button class="logout-button ml-10" (click)="logout()">Logout</button>
+    </div>
+
+</div>
+  <div class="chat-container">
+    <div class="messages" #messageContainer>
+      <div *ngFor="let message of messages" class="message-container" [ngClass]="{'sent-flexEnd': isSentByMe(message), 'received-flexStart': !isSentByMe(message)}">
+        <div class="message" [ngClass]="{'sent': isSentByMe(message), 'received': !isSentByMe(message)}">
+          <p>{{ message.text }}</p>
+          <span class="timestamp">{{ message.createdAt | date:'mediumTime' }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="message" placeholder="Type your message...">
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  

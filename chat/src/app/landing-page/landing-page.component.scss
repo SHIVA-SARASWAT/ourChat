@@ -1,0 +1,43 @@
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.ibb.co/T4rgtVZ/Whats-App-Image-2024-05-15-at-16-00-10.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.landing-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.landing-content h1 {
+    font-size: 17px;
+    font-family: serif;
+    margin-bottom: 20px;
+}
+
+.landing-content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn-login {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff7e67;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #ff5640;
+}

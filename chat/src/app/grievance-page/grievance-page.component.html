@@ -1,0 +1,42 @@
+<div class="grievance-container">
+    <h2 class="title">💖 Share What's on Your Mind 💖</h2>
+  
+    <div class="form-card">
+      <input [(ngModel)]="title" type="text" placeholder="Title" class="form-input" />
+  
+      <textarea [(ngModel)]="description" rows="4" placeholder="What's bothering you?" class="form-textarea"></textarea>
+  
+      <select [(ngModel)]="mood" class="form-select">
+        <option value="" disabled selected>Select Mood</option>
+        <option *ngFor="let moodOption of emojiMoods" [value]="moodOption.value">
+          {{ moodOption.label }}
+        </option>
+      </select>
+  
+      <select [(ngModel)]="severity" class="form-select">
+        <option value="" disabled selected>What can fix this?</option>
+        <option *ngFor="let level of severityLevels" [value]="level">{{ level }}</option>
+      </select>
+  
+      <!-- Show custom input if "Others" is selected -->
+      <div *ngIf="severity === 'Others... ✍️'" class="form-group mt-2">
+        <input type="text" class="form-input" [(ngModel)]="customSeverity" placeholder="Write your own sweet remedy 💕" />
+        <small class="text-muted">Tell me how I can make you feel better ✨</small>
+      </div>
+  
+      <button (click)="submitGrievance()" class="submit-button">Submit 💌</button>
+    </div>
+  
+    <div class="grievance-list">
+      <h3>📚 Grievances Shared</h3>
+      <div *ngFor="let grievance of grievances" class="grievance-item">
+        <h4>{{ grievance.title }} ({{ grievance.mood }})</h4>
+        <p>{{ grievance.description }}</p>
+        <small>Severity: {{ grievance.severity }} | Sent by: {{ grievance.sender }}</small>
+  
+        <!-- Delete Button -->
+        <button class="delete-button" (click)="deleteGrievance(grievance)">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+  
