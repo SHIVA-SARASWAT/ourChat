@@ -14,25 +14,29 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GrievancePageComponent } from './grievance-page/grievance-page.component';
+import { MemoryLaneComponent } from './memory-lane/memory-lane.component';
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
     LandingPageComponent,
     LoginComponent,
-    GrievancePageComponent
+    GrievancePageComponent,
+    MemoryLaneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    AngularFireModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(devEnvironment.firebase),
-    AngularFirestoreModule,
-    AngularFireDatabaseModule
   ],
-  
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

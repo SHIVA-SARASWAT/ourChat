@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Custom: Ignore environment files
+chat/src/enviroments/enviroment.ts
+chat/src/enviroments/enviroment.dev.ts
