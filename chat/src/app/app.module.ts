@@ -33,7 +33,7 @@ import { MemoryLaneComponent } from './memory-lane/memory-lane.component';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(devEnvironment.firebase),
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]
