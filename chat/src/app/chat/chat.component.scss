@@ -167,4 +167,13 @@ button:hover {
     background-color: #e62e8c;
     box-shadow: 0 3px 6px rgba(230, 46, 140, 0.8);
   }
-  
+ 
+.memory-Lane:hover {
+  background-color: #3b5998; 
+  box-shadow: 0 7px 15px rgba(59, 89, 152, 0.7); 
+}
+
+.memory-Lane:active {
+  background-color: #1d3557; 
+  box-shadow: 0 3px 6px rgba(29, 53, 87, 0.8); 
+}

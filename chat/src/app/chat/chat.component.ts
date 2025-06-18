@@ -78,5 +78,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     
     return message.sender === this.loggedInUser;
   }
-
+  memoryLane(){
+     this.router.navigate(['/memory-lane']);
+  }
 }

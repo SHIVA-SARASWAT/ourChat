@@ -11,7 +11,7 @@ const routes: Routes = [
   { path:'login',component:LoginComponent},
   {path:'grievance',component:GrievancePageComponent, canActivate: [AuthGuard]},
   {path:'chat',component:ChatComponent,canActivate: [AuthGuard]},
-  { path: 'memory-lane', component: MemoryLaneComponent }
+  { path: 'memory-lane', component: MemoryLaneComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
